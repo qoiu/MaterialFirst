@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="android:colorAccent">@color/secondaryColor</item>
+    </style>
+
+
+
+    <style name="MyCardViewStyle" parent="Theme.MaterialComponents.Light">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">200dp</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="circleRadius">5dp</item>
+        <item name="background">@color/cardview_light_background</item>
+    </style>
+</resources>
