@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="60dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:orientation="vertical"
+    android:id="@+id/bottom_fragment">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout1"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Введите имя:">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout2"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Введите пароль:"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:inputType="textPassword"
+            android:imeOptions="actionGo"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Sign In"
+        android:layout_gravity="right"
+        />
+</LinearLayout>
