@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MaterialFirst</string>
+    <string name="hint">Сложный пароль</string>
 </resources>

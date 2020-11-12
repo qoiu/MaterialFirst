@@ -1,9 +1,27 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Base application theme. -->
+
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="colorOnBackground">@color/primaryLightColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="android:colorControlNormal">@color/secondaryColor</item>
+        <item name="tint">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="AppThemeHalloween" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/halloween_primaryColor</item>
+        <item name="colorPrimaryVariant">@color/halloween_primaryLightColor</item>
+        <item name="colorPrimaryDark">@color/halloween_primaryDarkColor</item>
+        <item name="android:colorBackground">@color/halloween_primaryLightColor</item>
+        <item name="backgroundTint">@color/halloween_secondaryTextColor</item>
+        <item name="colorSecondary">@color/halloween_secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/halloween_secondaryDarkColor</item>
+        <item name="android:colorControlNormal">@color/halloween_secondaryColor</item>
+        <item name="tint">@color/halloween_secondaryTextColor</item>
     </style>
 
 
@@ -16,5 +34,19 @@
         <item name="circleRadius">5dp</item>
         <item name="background">@color/cardview_light_background</item>
     </style>
+
+    <style name="EditTextHintStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="colorControlActivated">@android:color/holo_purple</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+    </style>
+
 
 </resources>
