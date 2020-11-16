@@ -1,7 +1,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Base application theme. -->
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/primaryLightColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
@@ -12,7 +12,7 @@
         <item name="tint">@color/secondaryTextColor</item>
     </style>
 
-    <style name="AppThemeHalloween" parent="Theme.MaterialComponents.Light">
+    <style name="AppThemeHalloween" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/halloween_primaryColor</item>
         <item name="colorPrimaryVariant">@color/halloween_primaryLightColor</item>
         <item name="colorPrimaryDark">@color/halloween_primaryDarkColor</item>
