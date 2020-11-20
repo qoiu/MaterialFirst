@@ -1,16 +1,22 @@
 package com.qoiu.materialfirst
 
-import android.app.Activity
+import android.content.ClipData
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.navigation.NavigationView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -21,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var  mTextInputLayout: TextInputLayout
     private lateinit var mEditText: TextInputEditText
     private lateinit var imageButton: Button
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     private fun shouldShowError():Boolean {
         val textLength: Int = mEditText.text?.length ?: 0
@@ -35,17 +42,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val btn: Button=findViewById(R.id.button_phone)
-
+        setContentView(R.layout.main_drawer_layout)
         val toolbar:Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        btn.setOnClickListener {
-            Toast.makeText(this,"pressed",Toast.LENGTH_LONG).show()
-        }
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+        val navController = findNavController(R.id.nav_host_fragment)
 
+        appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.nav_home,R.id.nav_second), drawerLayout)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
         
         findViewById<FloatingActionButton>(R.id.floatingActionButton).apply {
             setOnClickListener {
@@ -56,12 +64,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        menuInflater.inflate(R.menu.activity_drawer_menu, menu)
+        menuInflater.inflate(R.menu.menu_toolbar, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        var id = item.getItemId()
+        val id = item.getItemId()
         when(id){
             R.id.av_action_img_OK->
                 Toast.makeText(this,"OKAY",Toast.LENGTH_LONG).show()
@@ -70,6 +79,13 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+
 
     fun addListenerOnButton()
     {
