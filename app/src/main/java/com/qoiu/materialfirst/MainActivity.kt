@@ -1,6 +1,5 @@
 package com.qoiu.materialfirst
 
-import android.content.ClipData
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -9,6 +8,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -17,6 +17,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
+        val rootLayout : CoordinatorLayout = findViewById(R.id.root_layout)
 
         appBarConfiguration = AppBarConfiguration(setOf(
             R.id.nav_home,R.id.nav_second), drawerLayout)
@@ -57,8 +59,10 @@ class MainActivity : AppCompatActivity() {
         
         findViewById<FloatingActionButton>(R.id.floatingActionButton).apply {
             setOnClickListener {
-
-                val bottom = BottomFragment().show(supportFragmentManager,null)
+                Snackbar.make(rootView,
+                    "Here should be very important information",
+                    Snackbar.LENGTH_SHORT)
+                    .show()
             }
         }
     }

@@ -21,7 +21,6 @@
         <item name="colorSecondary">@color/halloween_secondaryColor</item>
         <item name="colorSecondaryVariant">@color/halloween_secondaryDarkColor</item>
         <item name="android:colorControlNormal">@color/halloween_secondaryColor</item>
-        <item name="tint">@color/halloween_secondaryTextColor</item>
     </style>
 
 
