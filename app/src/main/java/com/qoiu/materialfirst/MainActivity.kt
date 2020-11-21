@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
-        val rootLayout : CoordinatorLayout = findViewById(R.id.root_layout)
+        val coordLayout : CoordinatorLayout = findViewById(R.id.coord_layout)
 
         appBarConfiguration = AppBarConfiguration(setOf(
             R.id.nav_home,R.id.nav_second), drawerLayout)
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         
         findViewById<FloatingActionButton>(R.id.floatingActionButton).apply {
             setOnClickListener {
-                Snackbar.make(rootView,
+                Snackbar.make(coordLayout,
                     "Here should be very important information",
                     Snackbar.LENGTH_SHORT)
                     .show()

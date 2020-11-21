@@ -18,5 +18,7 @@
     <color name="halloween_primaryTextColor">#000000</color>
     <color name="halloween_secondaryTextColor">#ffccbc</color>
 
+    <color name="transparent">#00000000</color>
+
 
 </resources>
