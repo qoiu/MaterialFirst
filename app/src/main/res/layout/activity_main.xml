@@ -14,12 +14,12 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/app_bar_height"
+            android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:collapsedTitleTextAppearance="@style/AppThemeHalloween"
             app:expandedTitleTextAppearance="@style/AppThemeHalloween"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|snapMargins|enterAlwaysCollapsed">
+            app:layout_scrollFlags="scroll|snapMargins|exitUntilCollapsed">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -37,9 +37,10 @@
                 app:layout_collapseParallaxMultiplier="@integer/config_navAnimTime"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main"/>
+        <include layout="@layout/content_main"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -48,6 +49,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="26dp"
         app:srcCompat="@drawable/ic_baseline_person_add_24"
-        app:tint="@color/halloween_secondaryTextColor"/>
+        app:tint="@color/halloween_secondaryTextColor"
+        app:layout_behavior=".ui.behavior.FabBehavior"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

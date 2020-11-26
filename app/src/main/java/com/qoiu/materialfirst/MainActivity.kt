@@ -51,21 +51,18 @@ class MainActivity : AppCompatActivity() {
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
         val coordLayout : CoordinatorLayout = findViewById(R.id.coord_layout)
+        val fab : FloatingActionButton = findViewById(R.id.floatingActionButton)
 
         appBarConfiguration = AppBarConfiguration(setOf(
             R.id.nav_home,R.id.nav_second), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
         
-        findViewById<FloatingActionButton>(R.id.floatingActionButton).apply {
-            setOnClickListener {
-                Snackbar.make(coordLayout,
-                    "Here should be very important information",
-                    Snackbar.LENGTH_SHORT)
-                    .show()
-            }
-        }
+
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.activity_drawer_menu, menu)
