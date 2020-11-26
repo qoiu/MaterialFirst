@@ -11,18 +11,18 @@
         android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_second"
-            app:destination="@id/nav_second" />
+            android:id="@+id/action_nav_home_to_nav_recycler"
+            app:destination="@id/nav_recycler" />
         <action
             android:id="@+id/action_nav_home_to_nav_coordinator"
             app:destination="@id/nav_coordinator" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_second"
-        android:name="com.qoiu.materialfirst.ui.second.SecondFragment"
-        android:label="Second"
-        tools:layout="@layout/fragment_second" >
+        android:id="@+id/nav_recycler"
+        android:name="com.qoiu.materialfirst.ui.recycler.RecyclerFragment"
+        android:label="Recycler"
+        tools:layout="@layout/fragment_recycler" >
     </fragment>
 
     <fragment

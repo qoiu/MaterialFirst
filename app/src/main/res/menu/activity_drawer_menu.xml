@@ -11,15 +11,13 @@
             android:title="Home" />
 
         <item
-            android:id="@+id/nav_second"
+            android:id="@+id/nav_recycler"
             android:icon="@drawable/ic_baseline_phone_24_black"
-            android:iconTintMode="screen"
-            android:title="Second"/>
+            android:title="Recycler"/>
 
         <item
             android:id="@+id/nav_coordinator"
             android:icon="@drawable/ic_baseline_phone_24_black"
-            android:iconTintMode="screen"
             android:title="Coordinator Layout"/>
 
     </group>
