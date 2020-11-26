@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.qoiu.materialfirst.R
 import com.qoiu.materialfirst.data.Card
 
-class RecyclerAdapter(
+class RecyclerAdapterBasic(
     view: View
 
 ):RecyclerView.Adapter<CardViewHolderBasic>() {
@@ -58,10 +58,4 @@ class RecyclerAdapter(
         holder.img.setImageResource(card.imgResource)
     }
 
-}
-
-sealed class CardItems{
-    data class Type1(val item:Card) : CardItems()
-
-    data class Type2(val item: Card) : CardItems()
 }

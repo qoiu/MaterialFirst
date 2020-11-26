@@ -16,6 +16,4 @@ abstract class BaseViewHolder<in T>(
 
     abstract fun bind(item: T)
 
-    protected abstract fun setImageIntoView(imageUri: Uri)
-
 }
