@@ -16,6 +16,12 @@
             android:iconTintMode="screen"
             android:title="Second"/>
 
+        <item
+            android:id="@+id/nav_coordinator"
+            android:icon="@drawable/ic_baseline_phone_24_black"
+            android:iconTintMode="screen"
+            android:title="Coordinator Layout"/>
+
     </group>
 
 

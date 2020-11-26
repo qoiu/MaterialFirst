@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_second"
             app:destination="@id/nav_second" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_coordinator"
+            app:destination="@id/nav_coordinator" />
     </fragment>
 
     <fragment
@@ -20,6 +23,13 @@
         android:name="com.qoiu.materialfirst.ui.second.SecondFragment"
         android:label="Second"
         tools:layout="@layout/fragment_second" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_coordinator"
+        android:name="com.qoiu.materialfirst.ui.coordinator.CoordinatorLayout"
+        android:label="Coordinator"
+        tools:layout="@layout/fragment_coordinator_layout" >
     </fragment>
 
 </navigation>
