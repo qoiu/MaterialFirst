@@ -27,6 +27,7 @@
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.7"
+                android:id="@+id/activity_main_iw"
                 android:src="@mipmap/jack_lantern" />
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"

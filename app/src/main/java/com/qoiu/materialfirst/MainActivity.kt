@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -42,10 +43,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+       //setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_drawer_layout)
         val toolbar:Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        findViewById<ImageView>(R.id.activity_main_iw).setImageResource(R.mipmap.jack_lantern)
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -54,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         val fab : FloatingActionButton = findViewById(R.id.floatingActionButton)
 
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.nav_home,R.id.nav_second), drawerLayout)
+            R.id.nav_home,R.id.nav_recycler), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
@@ -68,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.activity_drawer_menu, menu)
         menuInflater.inflate(R.menu.menu_toolbar, menu)
         return super.onCreateOptionsMenu(menu)
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
