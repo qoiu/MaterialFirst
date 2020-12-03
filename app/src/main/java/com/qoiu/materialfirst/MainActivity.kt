@@ -1,11 +1,13 @@
 package com.qoiu.materialfirst
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -18,9 +20,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import com.qoiu.materialfirst.data.themeData
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +32,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mEditText: TextInputEditText
     private lateinit var imageButton: Button
     private lateinit var appBarConfiguration: AppBarConfiguration
+
+    fun setupNextTheme(){
+    }
 
     private fun shouldShowError():Boolean {
         val textLength: Int = mEditText.text?.length ?: 0
@@ -41,14 +46,20 @@ class MainActivity : AppCompatActivity() {
     private fun hideError(){
         mTextInputLayout.error= EMPTY_STRING
     }
+    private lateinit var sharedPreference : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
-       //setTheme(R.style.AppTheme);
+
+        sharedPreference = getSharedPreferences("Theme", Context.MODE_PRIVATE)
+
+        setTheme(themeData.themes.get(sharedPreference.getInt("THEME",0)))
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_drawer_layout)
         val toolbar:Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        findViewById<ImageView>(R.id.activity_main_iw).setImageResource(R.mipmap.jack_lantern)
+        //findViewById<ImageView>(R.id.activity_main_iw).setImageResource(R.mipmap.jack_lantern)
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -61,14 +72,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-
-        
-
     }
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.activity_drawer_menu, menu)
+        menuInflater.inflate(R.menu.theme, menu)
         menuInflater.inflate(R.menu.menu_toolbar, menu)
         return super.onCreateOptionsMenu(menu)
 
@@ -81,6 +89,20 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"OKAY",Toast.LENGTH_LONG).show()
             R.id.av_action_img_Close->
                 finish()
+            R.id.theme_halloween->{
+                sharedPreference
+                    .edit()
+                    .putInt("THEME",themeData.THEME_HALLOWEEN)
+                    .apply()
+                recreate()
+            }
+            R.id.theme_winter-> {
+                sharedPreference
+                    .edit()
+                    .putInt("THEME",themeData.THEME_WINTER)
+                    .apply()
+                recreate()
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -89,8 +111,6 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
-
 
     fun addListenerOnButton()
     {

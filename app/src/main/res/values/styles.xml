@@ -1,27 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Base application theme. -->
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
-        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorAccent">@color/secondaryTextColor</item>
-        <item name="colorOnBackground">@color/primaryLightColor</item>
-        <item name="colorSecondary">@color/secondaryColor</item>
-        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
-        <item name="android:colorControlNormal">@color/secondaryColor</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/moody_blue</item>
+        <item name="colorPrimaryVariant">@color/melrose</item>
+        <item name="colorPrimaryDark">@color/kashmir_blue</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorOnBackground">@color/melrose</item>
+        <item name="colorSecondary">@color/denim</item>
+        <item name="colorSecondaryVariant">@color/cobalt</item>
+        <item name="android:colorControlNormal">@color/denim</item>
+        <item name="mainImg">@mipmap/snow</item>
     </style>
 
     <style name="AppThemeHalloween" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="colorPrimary">@color/halloween_primaryColor</item>
-        <item name="colorPrimaryVariant">@color/halloween_primaryLightColor</item>
-        <item name="colorPrimaryDark">@color/halloween_primaryDarkColor</item>
-        <item name="android:colorBackground">@color/halloween_primaryLightColor</item>
-        <item name="backgroundTint">@color/halloween_secondaryTextColor</item>
-        <item name="colorSecondary">@color/halloween_secondaryColor</item>
-        <item name="colorAccent">@color/halloween_secondaryColor</item>
-        <item name="colorSecondaryVariant">@color/halloween_secondaryDarkColor</item>
-        <item name="android:colorControlNormal">@color/halloween_secondaryColor</item>
+        <item name="colorPrimary">@color/cinnabar</item>
+        <item name="colorPrimaryVariant">@color/coral</item>
+        <item name="colorPrimaryDark">@color/bright_red</item>
+        <item name="android:colorBackground">@color/coral</item>
+        <item name="backgroundTint">@color/romantic</item>
+        <item name="colorSecondary">@color/outer_space</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="android:colorControlNormal">@color/outer_space</item>
+        <item name="mainImg">@mipmap/jack_lantern</item>
+        <item name="fabStyle_back">@color/</item>
     </style>
 
 

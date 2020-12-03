@@ -8,11 +8,11 @@
             android:shape="rectangle" >
 
             <solid
-                android:color="@color/primaryColor" />
+                android:color="@color/moody_blue" />
 
             <stroke
                 android:width="3dp"
-                android:color="@color/primaryDarkColor" />
+                android:color="@color/kashmir_blue" />
 
         </shape>
     </item>
@@ -24,11 +24,11 @@
             android:shape="rectangle" >
 
             <solid
-                android:color="@color/secondaryColor" />
+                android:color="@color/denim" />
 
             <stroke
                 android:width="3dp"
-                android:color="@color/primaryDarkColor" />
+                android:color="@color/kashmir_blue" />
 
         </shape>
     </item>
@@ -40,11 +40,11 @@
             android:shape="rectangle" >
 
             <solid
-                android:color="@color/secondaryDarkColor" />
+                android:color="@color/cobalt" />
 
             <stroke
                 android:width="3dp"
-                android:color="@color/secondaryLightColor" />
+                android:color="@color/malibu" />
 
         </shape>
     </item>
@@ -54,11 +54,11 @@
         android:shape="rectangle" >
 
         <solid
-            android:color="@color/halloween_secondaryTextColor" />
+            android:color="@color/romantic" />
 
         <stroke
             android:width="3dp"
-            android:color="@color/halloween_secondaryDarkColor" />
+            android:color="@color/black" />
 
     </shape>
     </item>
